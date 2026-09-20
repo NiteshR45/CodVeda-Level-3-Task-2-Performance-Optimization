@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Search</title>
+  <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>GitHub User Search</h1>
+
+    <p class="subtitle">
+      Search for any GitHub user and view their profile
+    </p>
+
+    <div class="search-box">
+        <input 
+          type="text" 
+          id="usernameInput" 
+          placeholder="Enter GitHub username..."
+          autocomplete="off"
+        >
+        <button id="searchBtn">
+          Search
+        </button>
+    </div>
+
+   
+    <div id="loading" class="loading hidden">
+      Loading...
+    </div>
+
+
+    <div id="error" class="error hidden"></div>
+
+    <div id="profile" class="profile hidden">
+
+      <img id="avatar"src=""alt="GitHub Profile Picture" width="130" height="130">
+
+      <h2 id="name"></h2>
+      <p id="username"></p>
+      <p id="bio"></p>
+
+      <div class="stats">
+
+        <div class="stat">
+          <h3 id="repos">0</h3>
+          <p>Repositories</p>
+        </div>
+
+        <div class="stat">
+          <h3 id="followers">0</h3>
+          <p>Followers</p>
+        </div>
+
+        <div class="stat">
+          <h3 id="following">0</h3>
+          <p>Following</p>
+        </div>
+
+      </div>
+
+      <a id="profileLink" href="#" target="_blank"rel="noopener noreferrer" >
+        View GitHub Profile
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>
